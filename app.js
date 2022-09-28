@@ -219,6 +219,20 @@
 //     }
 
 // }
+//----------------------------------------------
+//Делаем прямоугольник
+// for (let i = 0; i < 10; i++) {
+    
+//     for (let j = i; j < 10; j++){
+//         document.write('<span>*</span>')
+//     }
+//     for (let k = i; k > 0; k--){
+//         document.write('<span class="gri">*</span>')
+//     }
+//     document.write('<span class="i"><br></span?')
+// }
+
+//------------------------------------
 
 
 

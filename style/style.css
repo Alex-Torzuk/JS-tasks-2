@@ -1,3 +1,10 @@
 span {
-    background-color: red;
+    color: red;
+}
+.gri {
+    color: blue;
+}
+
+.i {
+    color: black;
 }
