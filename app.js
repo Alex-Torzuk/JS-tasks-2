@@ -234,5 +234,33 @@
 
 //------------------------------------
 
+const wallet = {
+    name: 'Alex',
+    btc: {
+        name: 'Bitcoin',
+        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1.png'>",
+        rate: '708868.69',
+        coin:'54'
+    },
+    ehr: {
+        name: 'Ethereum',
+        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'>",
+        rate: '47855.34',
+        coin:'27'
+    },
+    xlm: {
+        name: 'Stellar',
+        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/512.png'>",
+        rate: '4.16',
+        coin:'37'
+    },
+    show: function (nameCoine) {
+        document.getElementById('wallet').innerHTML = `Добрый день, ${wallet.name}! На вашем 
+        балансе ${wallet[nameCoine].name} ${wallet[nameCoine].logo} осталось ${wallet[nameCoine].coin} могет, 
+        если вы сегодня продадите их то, получите ${(wallet[nameCoine].rate*wallet[nameCoine].coin*31).toFixed(2)} грн.`
+    }
+}
+wallet.show(prompt('Введіть назви монет:','btc,ehr,xlm'))
+
 
 
