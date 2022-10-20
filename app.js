@@ -233,34 +233,212 @@
 // }
 
 //------------------------------------
+//Делаем электронный кошелек
 
-const wallet = {
-    name: 'Alex',
-    btc: {
-        name: 'Bitcoin',
-        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1.png'>",
-        rate: '708868.69',
-        coin:'54'
-    },
-    ehr: {
-        name: 'Ethereum',
-        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'>",
-        rate: '47855.34',
-        coin:'27'
-    },
-    xlm: {
-        name: 'Stellar',
-        logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/512.png'>",
-        rate: '4.16',
-        coin:'37'
-    },
-    show: function (nameCoine) {
-        document.getElementById('wallet').innerHTML = `Добрый день, ${wallet.name}! На вашем 
-        балансе ${wallet[nameCoine].name} ${wallet[nameCoine].logo} осталось ${wallet[nameCoine].coin} могет, 
-        если вы сегодня продадите их то, получите ${(wallet[nameCoine].rate*wallet[nameCoine].coin*31).toFixed(2)} грн.`
-    }
-}
-wallet.show(prompt('Введіть назви монет:','btc,ehr,xlm'))
+// const wallet = {
+//     name: 'Alex',
+//     btc: {
+//         name: 'Bitcoin',
+//         logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1.png'>",
+//         rate: '708868.69',
+//         coin:'54'
+//     },
+//     ehr: {
+//         name: 'Ethereum',
+//         logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/1027.png'>",
+//         rate: '47855.34',
+//         coin:'27'
+//     },
+//     xlm: {
+//         name: 'Stellar',
+//         logo: "<img src='https://s2.coinmarketcap.com/static/img/coins/64x64/512.png'>",
+//         rate: '4.16',
+//         coin:'37'
+//     },
+//     show: function (nameCoine) {
+//         document.getElementById('wallet').innerHTML = `Добрый день, ${wallet.name}! На вашем
+//         балансе ${wallet[nameCoine].name} ${wallet[nameCoine].logo} осталось ${wallet[nameCoine].coin} могет,
+//         если вы сегодня продадите их то, получите ${(wallet[nameCoine].rate*wallet[nameCoine].coin*31).toFixed(2)} грн.`
+//     }
+// }
+// wallet.show(prompt('Введіть назви монет:','btc,ehr,xlm'))
+//-----------------------------------
+
+// const a = () => {
+//     alert('Hello world')
+// }
+
+// a()
+
+//---------------------
+
+// Функція ggg приймає 2 параметри: анонімну функцію, яка повертає 3 та анонімну функцію, яка
+// повертає 4. Поверніть результатом функції ggg суму 3 та 4.
+
+// let a = 3;
+// let b = 4;
+
+// function ggg(x1, x2) {
+//     return x1() + x2()
+// }
+// let rez = ggg(
+//     function () { return 3 },
+//     function () {return 4}
+// )
+// document.write(rez)
+
+// Зробіть функцію, яка приймає параметром число від 1 до 7, а повертає день тижня українською мовою
+
+// const day = Math.floor(Math.random() * 7 + 1)
+// console.log(day)
+// function dayWeek(day) {
+//     switch (day) {
+//         case 1: return 'Понеділок';
+//         case 2: return 'Вівторок';
+//         case 3: return 'Середа';
+//         case 4: return 'Четверг';
+//         case 5: return 'П ятниця';
+//         case 6: return 'Субота';
+//         case 7: return 'Неділя';
+//     }
+// }
+// document.write(dayWeek(day))
+//-------------------------------
+
+// Дан рядок типу "var_text_hello". Зробіть із нього текст "VarTextHello".
+
+// const str = 'var_text_hello'
+// function textHello(str) {
+//     let arr = str.split('_')
+//     for (let i = 0; i < arr.length; i++) {
+//        arr[i] = arr[i][0].toUpperCase() + arr[i].substr(1)
+//     }
+//     return arr.join('')
+// }
+// console.log(textHello(str))
+
+//------------------------------------
+
+// Створіть функцію, яка заповнюватиме масив 10-ма іксами  за допомогою циклу
+
+// function x() {
+//     let arr = []
+    
+//     for (let i = 0; i < 10; i += 1){
+//         arr.push('x')
+//     }
+//     return arr
+        
+// }
+
+// console.log(x())
+
+//----------------------------------
+
+// Використовуючи CallBack function, створіть калькулятор, який буде від користувача приймати 2 числа
+// і знак арефметичної операції. При введенні не числа або при розподілі на 0 виводити помилку.
+
+// const match = {
+//     plus: function (a, b) {
+//         return a + b
+//     },
+//     minus: function (a, b) {
+//         return a - b
+//      },
+//     mult: function (a, b) {
+//         return a * b
+//      },
+//     div: function (a, b) {
+//         if (b === 0) {
+//             return console.error('на нуль не ділиться')
+//         }
+//         return a / b
+//     }
+// }
+
+// const num1 = parseFloat(prompt('Ввудіть значення'))
+// const num2 = parseFloat(prompt('Введіть друге значення'))
+// const name = prompt('Введіть знак')
+
+// function calc(a, b, c, d) {
+//     if (c === '+') {
+//         return d.plus(a, b)
+//     } else if (c === '-') {
+//        return d.minus(a, b)
+//     } else if (c === '*') {
+//        return d.mult(a, b)
+//     } else if (c === '/') {
+//        return d.div(a, b)
+//     } else {
+//         console.error('не вірний знак операції')
+//     }
+// }
+// const res = alert(calc(num1, num2, name, match))
+//---------------
+
+// let arr = [2, 3, 5, 1, 4, 9]
+// function callback(a) {
+//     //a - element
+//     //b - index
+//     //c - arr
+//     console.log(a)
+// }
+// arr.forEach(callback)
+//------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
