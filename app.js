@@ -377,7 +377,7 @@
 //---------------
 
 // let arr = [2, 3, 5, 1, 4, 9]
-// function callback(a) {
+// function callback(a, b, c) {
 //     //a - element
 //     //b - index
 //     //c - arr
@@ -385,6 +385,22 @@
 // }
 // arr.forEach(callback)
 //------------------------------
+
+// function add(arg1, arg2) {
+//     return arg1 + arg2
+// }
+
+// function multiply(arg1, arg2) {
+//    return arg1 * arg2
+// }
+
+// let a = multiply(36325, 9824)
+// let rez = add(a, 777)
+// console.log(rez)
+//--------------------------------
+
+let arr = [1, 2, 3, 4, 5]
+let arr2 = [1, 2, 3, 4, 5]
 
 
 
