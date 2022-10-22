@@ -399,13 +399,13 @@
 // console.log(rez)
 //--------------------------------
 
-let arr = [1, 2, 3, 4, 5]
-let arr2 = [1, 2, 3, 4, 5]
+// let obj = new Object()
 
-
-
-
-
+// obj.name = 'Ivan'
+// console.log(obj)
+//---------------
+// const mydate = new String()
+// console.log(typeof(mydate))
 
 
 
