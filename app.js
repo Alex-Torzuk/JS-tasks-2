@@ -407,7 +407,21 @@
 // const mydate = new String()
 // console.log(typeof(mydate))
 
+//--------------------------------------------- 
 
+let balance = 10000
+const payment = 12000
+let res
+const massage = alert(`Общая стоимость заказа ${payment} кредитов. Проверяем 
+количество доступных средств на счету`)
+if (payment <= balance) {
+    res = balance - payment
+    alert(`На счету осталось ${res} кредитов`)
+    alert('Операция завершена')
+} else {
+    alert(`На счету не достаточно для проведения операции`)
+    alert('Операция завершена')
+    }
 
 
 
