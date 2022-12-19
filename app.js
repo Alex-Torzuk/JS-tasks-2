@@ -407,21 +407,78 @@
 // const mydate = new String()
 // console.log(typeof(mydate))
 
-//--------------------------------------------- 
+//---------------------------------------------
 
-let balance = 10000
-const payment = 12000
-let res
-const massage = alert(`Общая стоимость заказа ${payment} кредитов. Проверяем 
-количество доступных средств на счету`)
-if (payment <= balance) {
-    res = balance - payment
-    alert(`На счету осталось ${res} кредитов`)
-    alert('Операция завершена')
-} else {
-    alert(`На счету не достаточно для проведения операции`)
-    alert('Операция завершена')
-    }
+// let balance = 10000
+// const payment = 2000
+// let res
+// const massage = alert(`Общая стоимость заказа ${payment} кредитов. Проверяем
+// количество доступных средств на счету`)
+// if (payment <= balance) {
+//     res = balance - payment
+//     alert(`На счету осталось ${res} кредитов`)
+//     alert('Операция завершена')
+// } else {
+//     alert(`На счету не достаточно для проведения операции`)
+    
+//     }
+// alert('Операция завершена')
+
+
+let totalSpent = 20000
+let payment = 500
+let discount = 0
+if (totalSpent >= 100 && totalSpent <= 1000) {
+    console.log('бронзовый партнер, скидка 2%')
+    discount = 0.02
+}else if (totalSpent >= 1000 && totalSpent <= 5000) {
+    console.log('серебрянный партнер, скидка 5%')
+    discount = 0.05
+}else if (totalSpent >= 5000) {
+    console.log('золотой партнер, скидка 10%')
+    discount = 0.1
+}else if (totalSpent <= 100) {
+    console.log('не партнер, скидка 0%')
+}
+payment = payment - payment * discount
+console.log(`оформляем заказ на сумму ${payment}, со скидкой
+${discount * 100}%`)
+totalSpent += payment
+console.log(`Общая сумма потраченого в магазине ${totalSpent}`)
+
+// const stars = 1
+// let price
+// switch (stars) {
+//     case 1:
+//         price = 20
+//         break;
+//     case 2:
+//         price = 30
+//         break
+// }
+// console.log(price)
+
+// const minSalary = 500
+// const maxSalary = 5000
+// const employees = 3
+// let total = 0
+// let totalSalary = 0
+// for (let i = 1; i <= employees; i += 1) {
+//     const salary = Math.round(Math.random() * (maxSalary - minSalary) + minSalary)
+//     console.log(`ЗП работника номер ${i} - ${salary} `)
+//     total += salary
+// }console.log(total)
+
+// const min = 6
+// const max = 13
+// let total = 0
+// for (let i = min; i <= max; i += 1){
+//     if (i % 2 != 1) {
+        
+//         total += i
+//     }
+// }console.log(total)
+
 
 
 
