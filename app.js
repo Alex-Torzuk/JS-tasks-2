@@ -425,26 +425,26 @@
 // alert('Операция завершена')
 
 
-let totalSpent = 20000
-let payment = 500
-let discount = 0
-if (totalSpent >= 100 && totalSpent <= 1000) {
-    console.log('бронзовый партнер, скидка 2%')
-    discount = 0.02
-}else if (totalSpent >= 1000 && totalSpent <= 5000) {
-    console.log('серебрянный партнер, скидка 5%')
-    discount = 0.05
-}else if (totalSpent >= 5000) {
-    console.log('золотой партнер, скидка 10%')
-    discount = 0.1
-}else if (totalSpent <= 100) {
-    console.log('не партнер, скидка 0%')
-}
-payment = payment - payment * discount
-console.log(`оформляем заказ на сумму ${payment}, со скидкой
-${discount * 100}%`)
-totalSpent += payment
-console.log(`Общая сумма потраченого в магазине ${totalSpent}`)
+// let totalSpent = 20000
+// let payment = 500
+// let discount = 0
+// if (totalSpent >= 100 && totalSpent <= 1000) {
+//     console.log('бронзовый партнер, скидка 2%')
+//     discount = 0.02
+// }else if (totalSpent >= 1000 && totalSpent <= 5000) {
+//     console.log('серебрянный партнер, скидка 5%')
+//     discount = 0.05
+// }else if (totalSpent >= 5000) {
+//     console.log('золотой партнер, скидка 10%')
+//     discount = 0.1
+// }else if (totalSpent <= 100) {
+//     console.log('не партнер, скидка 0%')
+// }
+// payment = payment - payment * discount
+// console.log(`оформляем заказ на сумму ${payment}, со скидкой
+// ${discount * 100}%`)
+// totalSpent += payment
+// console.log(`Общая сумма потраченого в магазине ${totalSpent}`)
 
 // const stars = 1
 // let price
@@ -479,18 +479,106 @@ console.log(`Общая сумма потраченого в магазине ${
 //     }
 // }console.log(total)
 
+// const arr = ['Alex', 'Anna', 'Sasha', 'luda']
+// console.table(arr)
 
+//
 
+// let cart = [54, 28, 105, 70, 92, 17, 120]
+// let result = 0
+// for (let i = 0; i < cart.length; i += 1){
+//     result += cart[i]
+// }console.log(result)
 
+// let cart = [54, 28, 105, 70, 92, 17, 120]
+// let result = 0
 
+// for (elem of cart) {
+//     result += elem
+// }console.log(result)
 
+// const number = [1, 5, 8, 9, 12, 4, 15, 27, 30, 18, 11]
+// let result = 0
+// for (elem of number) {
+//     if (elem % 2 != 1) {
+//         console.log(elem)
+//         result += elem
+//     }
+// }console.log(result)
+ 
+// const login = ['fn2i2hfb2', 'dj8239fh', 'jcnendew9', 'cweow838f']
+// const loginToFind = 'jcnendew9'
 
+// for (let i = 0; i < login.length; i += 1){
+//     if (loginToFind === login[i]) {
+//         console.log('Пользователь логин найден')
+//         break
+//     } else {
+//         console.log('Пользователь логин не найден')
+//     }
+// }
 
+// const login = ['fn2i2hfb2', 'dj8239fh', 'jcnendew9', 'cweow838f']
+// const loginToFind = 'jcnendew9'
 
+// console.log(login.includes('jcnendew9'))// один вариант
 
+// const message = login.includes(loginToFind) ? 'yes' : 'no'
+// console.log(message)// второй вариант
 
+// const number = [51, 18, 13, 24, 7, 85, 19]
+// let num = number[0]
+// for (elem of number) {
+    
+//     if (elem < num) {
+//         num = elem
+//     }
+// }console.log(num)
 
+// const numbers = [51, 18, 13, 24, 7, 85, 19]
+// let bigNum = numbers[0]
+// for (number of numbers) {
+//     if (number > bigNum) {
+//         bigNum = number
+//     }
+// }console.log(bigNum)
 
+// const array1 = [5, 10, 15, 20]
+// const array2 = [10, 20, 30]
+// let arr1 = 0
+// let arr2 = 0
+// let res
+// for (num of array1) {
+//     arr1 += num
+// }
+// for (num of array2) {
+//     arr2 += num
+// }
+// res = arr1 + arr2
+// console.log(res)
+
+// const add  = function (x, y) {
+//     return x + y
+// }
+// let num = add(10, 5)
+// console.log(num)
+
+const logins = ['kldsncwfe8', 'bfvr7', 'jfv8e', 'kjdsfb7']
+
+const findLogin = function (allLogins, loginToFind) {
+
+    for (const login of allLogins) {
+            
+        if (login === loginToFind) {
+            return `Пользователь ${loginToFind} найден`
+        }
+    }
+    return `Пользователь ${loginToFind} не найден`
+}
+console.log(findLogin(logins, 'klsncwfe8'))
+console.log(findLogin(logins, 'bfvr7'))
+console.log(findLogin(logins, 'jv8e'))
+console.log(findLogin(logins, 'kjdsfb7'))
 
 
 
