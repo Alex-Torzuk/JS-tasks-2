@@ -563,23 +563,49 @@
 // let num = add(10, 5)
 // console.log(num)
 
-const logins = ['kldsncwfe8', 'bfvr7', 'jfv8e', 'kjdsfb7']
+// const logins = ['kldsncwfe8', 'bfvr7', 'jfv8e', 'kjdsfb7']
 
-const findLogin = function (allLogins, loginToFind) {
+// const findLogin = function (allLogins, loginToFind) {
 
-    for (const login of allLogins) {
+//     for (const login of allLogins) {
             
-        if (login === loginToFind) {
-            return `Пользователь ${loginToFind} найден`
-        }
-    }
-    return `Пользователь ${loginToFind} не найден`
-}
-console.log(findLogin(logins, 'klsncwfe8'))
-console.log(findLogin(logins, 'bfvr7'))
-console.log(findLogin(logins, 'jv8e'))
-console.log(findLogin(logins, 'kjdsfb7'))
+//         if (login === loginToFind) {
+//             return `Пользователь ${loginToFind} найден`
+//         }
+//     }
+//     return `Пользователь ${loginToFind} не найден`
+// }
+// console.log(findLogin(logins, 'klsncwfe8'))
+// console.log(findLogin(logins, 'bfvr7'))
+// console.log(findLogin(logins, 'jv8e'))
+// console.log(findLogin(logins, 'kjdsfb7'))
 
+// const playlist = {
+//     name: 'Мой первый плейлист',
+//     rating: 5,
+//     tracks: ['трек-1', 'трек-2', 'трек-3'],
+//     trackCount: 3,
+// }
+
+// const propertyName = 'tracks'
+// console.log(playlist['propertyName'])
+
+// const feedback = {
+//     good: 5,
+//     neutral: 10, 
+//     bad: 3, 
+// }
+
+// const keys = Object.keys(feedback)
+// console.log(keys)
+
+const feedback = {
+    good: 5,
+    neutral: 10, 
+    bad: 3, 
+}
+const values = Object.values(feedback)
+console.log(values)
 
 
 
