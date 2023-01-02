@@ -592,24 +592,62 @@
 
 // const feedback = {
 //     good: 5,
-//     neutral: 10, 
-//     bad: 3, 
+//     neutral: 10,
+//     bad: 3,
 // }
 
 // const keys = Object.keys(feedback)
 // console.log(keys)
 
-const feedback = {
-    good: 5,
-    neutral: 10, 
-    bad: 3, 
+// const feedback = {
+//     good: 5,
+//     neutral: 10,
+//     bad: 3,
+// }
+// const values = Object.values(feedback)
+// console.log(values)
+
+// const arr = [1, 2, 3].concat([3, 4, 5, 6])
+// console.log(arr)
+
+// const numbers = [1,2,3,...[221, 16]]
+// console.log(numbers)
+
+// const temps = [18, 14, 12, 21, 29, 24]
+// console.log(Math.max(...temps))
+
+// const a = { x: 1, y: 2 }
+// const b = { x: 0, z: 3 }
+// const c = Object.assign({}, a, b)
+// console.log(c)
+
+// const a = { x: 1, y: 2 }
+// const b = { x: 0, z: 3 }
+// const c = {...a, ...b}
+// console.log(c)
+
+// const playtList = {
+//     name: 'Мой супер плейлист',
+//     rating: 5,
+//     tracks: ['трек-1', 'трек-2', 'трек-3'],
+//     trackCount: 3,
+// }
+// const { name: superName, rating, tracks, trackCount } = playtList
+// console.log(superName, rating, tracks, trackCount)
+
+const authors = {
+    kivi: 4, 
+    poly: 7, 
+    ajax: 9, 
+    mango: 6, 
 }
-const values = Object.values(feedback)
-console.log(values)
 
-
-
-
+const entries = Object.entries(authors)
+for (const entry of entries) {
+    const [name, rating] = entry
+    
+    console.log(name, rating)
+}
 
 
 
