@@ -604,6 +604,7 @@
 //     neutral: 10,
 //     bad: 3,
 // }
+
 // const values = Object.values(feedback)
 // console.log(values)
 
@@ -612,6 +613,19 @@
 
 // const numbers = [1,2,3,...[221, 16]]
 // console.log(numbers)
+
+
+//Объекты
+
+// Метод конкат
+
+// const arr = [1, 2, 3].concat([4, 5, 6], [7, 8, 9])
+// console.log(arr)
+
+// Метод распыления
+// const arr = [100, ...[1, 2, 3], 200, ...[4, 5,6]]
+// console.log(arr)
+
 
 // const temps = [18, 14, 12, 21, 29, 24]
 // console.log(Math.max(...temps))
@@ -635,19 +649,22 @@
 // const { name: superName, rating, tracks, trackCount } = playtList
 // console.log(superName, rating, tracks, trackCount)
 
-const authors = {
-    kivi: 4, 
-    poly: 7, 
-    ajax: 9, 
-    mango: 6, 
-}
+// const authors = {
+//     kivi: 4, 
+//     poly: 7, 
+//     ajax: 9, 
+//     mango: 6, 
+// }
 
-const entries = Object.entries(authors)
-for (const entry of entries) {
-    const [name, rating] = entry
+// const entries = Object.entries(authors)
+// for (const entry of entries) {
+//     const [name, rating] = entry
     
-    console.log(name, rating)
-}
+//     console.log(name, rating)
+// }
+
+
+
 
 
 
