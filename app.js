@@ -645,9 +645,18 @@
 //     rating: 5,
 //     tracks: ['трек-1', 'трек-2', 'трек-3'],
 //     trackCount: 3,
+//     stats: {
+//         one: 1,
+//         two: 2,
+//         three: 3,
+//     }
 // }
-// const { name: superName, rating, tracks, trackCount } = playtList
-// console.log(superName, rating, tracks, trackCount)
+// const { name: superName, rating, tracks, trackCount, stats: {one, two, three}, } = playtList
+// console.log(superName, rating, tracks, trackCount, one, two, three)
+
+const rgb = [255, 100, 80]
+const [red, green, blue] = rgb
+console.log(red, green, blue)
 
 // const authors = {
 //     kivi: 4, 
@@ -662,6 +671,22 @@
     
 //     console.log(name, rating)
 // }
+
+// const a = { x: 1, y: 2 }
+// const b = { x: 0, z: 3 }
+// const c = {...a, ...b}
+// console.log(c)
+
+// const myCrazyObject = {
+//     name: ' Нелепый объект',
+//     someArray: [7, 9, {'purpose': ' путаница ', 'number': 123}, 3.3], 
+//     randomAnimal:' Банановая акула'
+// }
+// console.log(myCrazyObject)
+// const {someArray } = myCrazyObject
+// console.log(someArray[2].number)
+
+
 
 
 
