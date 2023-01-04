@@ -654,23 +654,23 @@
 // const { name: superName, rating, tracks, trackCount, stats: {one, two, three}, } = playtList
 // console.log(superName, rating, tracks, trackCount, one, two, three)
 
-const rgb = [255, 100, 80]
-const [red, green, blue] = rgb
-console.log(red, green, blue)
+// const rgb = [255, 100, 80]
+// const [red, green, blue] = rgb
+// console.log(red, green, blue)
 
-// const authors = {
-//     kivi: 4, 
-//     poly: 7, 
-//     ajax: 9, 
-//     mango: 6, 
-// }
+const authors = {
+    kivi: 4, 
+    poly: 7, 
+    ajax: 9, 
+    mango: 6, 
+}
 
-// const entries = Object.entries(authors)
-// for (const entry of entries) {
-//     const [name, rating] = entry
+const entries = Object.entries(authors)
+for (const entry of entries) {
+    const [name, rating] = entry
     
-//     console.log(name, rating)
-// }
+    console.log(name, rating)
+}
 
 // const a = { x: 1, y: 2 }
 // const b = { x: 0, z: 3 }
