@@ -658,19 +658,27 @@
 // const [red, green, blue] = rgb
 // console.log(red, green, blue)
 
-const authors = {
-    kivi: 4, 
-    poly: 7, 
-    ajax: 9, 
-    mango: 6, 
+const obj = {
+    a: 1,
+    b: 2,
+    c: 3, 
 }
+ const objKeys = Object.values(obj)
+ console.log(objKeys)
 
-const entries = Object.entries(authors)
-for (const entry of entries) {
-    const [name, rating] = entry
+// const authors = {
+//     kivi: 4, 
+//     poly: 7, 
+//     ajax: 9, 
+//     mango: 6, 
+// }
+
+// const entries = Object.entries(authors)
+// for (const entry of entries) {
+//     const [name, rating] = entry
     
-    console.log(name, rating)
-}
+//     console.log(name, rating)
+// }
 
 // const a = { x: 1, y: 2 }
 // const b = { x: 0, z: 3 }
