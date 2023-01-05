@@ -658,13 +658,13 @@
 // const [red, green, blue] = rgb
 // console.log(red, green, blue)
 
-const obj = {
-    a: 1,
-    b: 2,
-    c: 3, 
-}
- const objKeys = Object.values(obj)
- console.log(objKeys)
+// const obj = {
+//     a: 1,
+//     b: 2,
+//     c: 3, 
+// }
+//  const objKeys = Object.values(obj)
+//  console.log(objKeys)
 
 // const authors = {
 //     kivi: 4, 
@@ -674,11 +674,48 @@ const obj = {
 // }
 
 // const entries = Object.entries(authors)
+// // console.log(entries)
 // for (const entry of entries) {
+//     // console.log(entry)
 //     const [name, rating] = entry
     
 //     console.log(name, rating)
 // }
+
+// const playtList = {
+//         name: 'Мой супер плейлист',
+//         rating: 5,
+//         tracks: ['трек-1', 'трек-2', 'трек-3'],
+//         trackCount: 3,
+//         stats: {
+//             one: 1,
+//             two: 2,
+//             three: 3,
+//         }
+//     }
+//     const {name, rating, ...newPlaylist} = playtList
+//     console.log(name, rating)
+//     console.log(newPlaylist)
+      
+
+// const showProfileInfo = function (profile) {
+//     const {name, rating, tracks, trackCount, stats} = profile
+    
+//     console.log(name, rating, tracks, trackCount, stats)
+// }
+
+//     const playtList = {
+//         name: 'Мой супер плейлист',
+//         rating: 5,
+//         tracks: ['трек-1', 'трек-2', 'трек-3'],
+//         trackCount: 3,
+//         stats: {
+//             one: 1,
+//             two: 2,
+//             three: 3,
+//         }
+//     }
+// showProfileInfo(playtList)
 
 // const a = { x: 1, y: 2 }
 // const b = { x: 0, z: 3 }
@@ -694,8 +731,86 @@ const obj = {
 // const {someArray } = myCrazyObject
 // console.log(someArray[2].number)
 
+const cart = {
+    //Предметы
+    items: [],
+    //Получить предметы
+    getItems() {
+        return this.items
+    },
+    //Прибавлять
+    add(product) {
+        //  
 
+        for(const item of this.items){
+            if(item.name === product.name){
+                item.quantity += 1
+                return
+            }
+        }
+        const newProduct = {
+            ...product,
+            quantity: 1
 
+        }
+        this.items.push(newProduct)
+    },
+    // Степень отдаления
+    remove(productName) {
+        for (let i = 0; i < this.items.length; i += 1) {
+            console.log(this.items[i])
+            if(productName === this.items[i].name) {
+                console.log('мы нашли такой продукт ', productName)
+                console.log(i)
+                this.items.splice(i, 1)
+            }
+        }
+        // for (const items of this.items){
+        //     if (productName === items.name){
+        //         console.log('мы нашли такой продукт ', productName)
+        //     }
+        // }
+    },
+    clear() {
+        this.items = []
+    },
+    countTotalPrice() {
+        // console.log(this.items)
+        const {items} = this
+        let total = 0
+        for(const{price, quantity} of items){
+            total += price * quantity
+        }
+        // for (const item of this.items) {
+            
+        //     total += item.price
+        // }
+        return total
+    },
+     // если продукт уже есть в корзине то эта функция Увеличить количество на 1
+    increaseQuantity(productName) {},
+    // получает имя продукта ищет его в корзине и Уменьшить количество на 1
+    decreaseQuantity(productName) {},
+}
+
+console.log(cart.getItems())
+
+cart.add({name: 'apple', price: 50})
+cart.add({name: 'orange', price: 60})
+cart.add({name: 'cherry', price: 70})
+cart.add({name: 'tomato', price: 100})
+cart.add({name: 'cherry', price: 70})
+cart.add({name: 'tomato', price: 100})
+
+console.table(cart.getItems())
+
+console.log('Total: ', cart.countTotalPrice())
+
+cart.remove('tomato')
+console.table(cart.getItems())
+
+cart.clear()
+console.log(cart.getItems())
 
 
 
