@@ -731,88 +731,289 @@
 // const {someArray } = myCrazyObject
 // console.log(someArray[2].number)
 
-const cart = {
-    //Предметы
-    items: [],
-    //Получить предметы
-    getItems() {
-        return this.items
-    },
-    //Прибавлять
-    add(product) {
-        //  
 
-        for(const item of this.items){
-            if(item.name === product.name){
-                item.quantity += 1
-                return
-            }
-        }
-        const newProduct = {
-            ...product,
-            quantity: 1
+//.........................Императивная работа с коллекциями данных
 
-        }
-        this.items.push(newProduct)
-    },
-    // Степень отдаления
-    remove(productName) {
-        for (let i = 0; i < this.items.length; i += 1) {
-            console.log(this.items[i])
-            if(productName === this.items[i].name) {
-                console.log('мы нашли такой продукт ', productName)
-                console.log(i)
-                this.items.splice(i, 1)
-            }
-        }
-        // for (const items of this.items){
-        //     if (productName === items.name){
-        //         console.log('мы нашли такой продукт ', productName)
-        //     }
-        // }
-    },
-    clear() {
-        this.items = []
-    },
-    countTotalPrice() {
-        // console.log(this.items)
-        const {items} = this
-        let total = 0
-        for(const{price, quantity} of items){
-            total += price * quantity
-        }
-        // for (const item of this.items) {
+
+// const cart = {
+//     //Предметы
+//     items: [],
+//     //Получить предметы
+//     getItems() {
+//         return this.items
+//     },
+//     //Прибавлять
+//     add(product) {
+//         //  
+
+//         for(const item of this.items){
+//             if(item.name === product.name){
+//                 item.quantity += 1
+//                 return
+//             }
+//         }
+//         const newProduct = {
+//             ...product,
+//             quantity: 1
+
+//         }
+//         this.items.push(newProduct)
+//     },
+//     // Степень отдаления
+//     remove(productName) {
+//         for (let i = 0; i < this.items.length; i += 1) {
+//             // console.log(this.items[i])
+//             if(productName === this.items[i].name) {
+//                 console.log('мы нашли такой продукт ', productName)
+//                 console.log(i)
+//                 this.items.splice(i, 1)
+//             }
+//         }
+//         // for (const items of this.items){
+//         //     if (productName === items.name){
+//         //         console.log('мы нашли такой продукт ', productName)
+//         //     }
+//         // }
+//     },
+//     clear() {
+//         this.items = []
+//     },
+//     countTotalPrice() {
+//         // console.log(this.items)
+//         const {items} = this
+//         let total = 0
+//         for(const{price, quantity} of items){
+//             total += price * quantity
+//         }
+//         // for (const item of this.items) {
             
-        //     total += item.price
-        // }
-        return total
-    },
-     // если продукт уже есть в корзине то эта функция Увеличить количество на 1
-    increaseQuantity(productName) {},
-    // получает имя продукта ищет его в корзине и Уменьшить количество на 1
-    decreaseQuantity(productName) {},
+//         //     total += item.price
+//         // }
+//         return total
+//     },
+//      // если продукт уже есть в корзине то эта функция Увеличить количество на 1
+//     increaseQuantity(productName) {
+        
+        
+//         for (let item of this.items){
+            
+//             if (productName === item.name){
+                
+//                 console.log(`Продукт ${productName} уже есть в корзине!!!`)
+//                 item.quantity += 1
+//                 item.price *= 2
+
+//             }
+            
+            
+//         }
+        
+//     },
+//     // получает имя продукта ищет его в корзине и Уменьшить количество на 1
+//     decreaseQuantity(productName) {
+        
+//         for (let item of this.items){
+            
+//             if (productName === item.name){
+                
+//                 console.log(`Продукт ${productName} уже есть в корзине!!!`)
+//                 item.quantity -= 1
+//                 item.price /= 2
+
+//             }
+//         }
+//     },
+// }
+
+// console.log(cart.getItems())
+
+// cart.add({name: 'apple', price: 50})
+// cart.add({name: 'orange', price: 60})
+// cart.add({name: 'cherry', price: 70})
+// cart.add({name: 'tomato', price: 100})
+// cart.add({name: 'cherry', price: 70})
+// cart.add({name: 'tomato', price: 100})
+
+// console.table(cart.getItems())
+
+// console.log('Total: ', cart.countTotalPrice())
+
+// cart.remove('tomato')
+// console.table(cart.getItems())
+
+// cart.increaseQuantity('apple')
+// cart.increaseQuantity('orange')
+// cart.increaseQuantity('cherry')
+// console.table(cart.getItems())
+
+// cart.decreaseQuantity('apple')
+// cart.decreaseQuantity('orange')
+// cart.decreaseQuantity('cherry')
+// console.table(cart.getItems())
+
+// cart.clear('apple')
+// console.log(cart.getItems())
+
+//--------------------------------------------------------------
+
+// Функция обратного вызова - callback
+// Функция может принимать другие функции как параметры;
+// Функция которая передается другой функции как аргумент называется - 
+// функцией обратного вызова (callback - функция);
+// Функция которая принимает другую функцию как параметр или возвращает 
+// функцию как результат своей работы называется - функцией высшего порядка.
+
+//------------------
+// const fnA = function (message, callback){
+//     console.log(message)
+//     callback(100)
+// }
+// const fnB = function (number){
+//     console.log('Это лог при вызове fnB', number)
+// }
+
+// fnA('Hello world', fnB)
+//------------------ 
+
+// const doMach = function(a, b, callback){
+//     const resalt = callback(a, b)
+//     console.log(resalt)
+// }
+
+// const add = function(x, y){
+//     return x + y
+// }
+
+// doMach(5, 5, add)
+
+//-------------------
+
+// const doMach = function(a, b, callback){
+//     const resalt = callback(a, b)
+//     console.log(resalt)
+// }
+
+// doMach(5, 5, function(x, y){
+//     return x + y
+// })// второй вариант (одноразовая функция)
+
+//--------------------
+
+// Отложенный вызов: регистрации событий
+
+// const buttnRef = document.querySelector('.js-button')
+
+// const handleBtnClick = function(){
+//     console.log('Клик по кнопке'+ Date.now())
+// }
+// buttnRef.addEventListener('click', handleBtnClick)
+
+//--------------------
+
+// Отложенный вызов: геолокация
+
+// const onGetPjsitionsSuccess = function(position){
+//     console.log(position)
+// }
+
+// const onGetPjsitionsError = function(error){
+//     console.log(error)
+// }
+
+// window.navigator.geolocation.getCurrentPosition(
+//     onGetPjsitionsSuccess,
+//     onGetPjsitionsSuccess,
+// )
+
+//--------------------
+
+//Отложенный вызов: интервалы
+
+// const callback = function (){
+//     console.log('Через 2 секунды')
+// }
+
+// console.log('В коде перед таймаутом')
+
+// setTimeout(callback, 3000)
+
+// console.log('В коде после таймаута')
+
+//------------------------
+
+// Фильтр
+
+//  const filter = function(array, test) {
+//     const filteredArray = []
+//     for (const el of array){
+//         console.log(el)
+//         const passed = test(el)
+//         if(passed){
+//             filteredArray.push(el) 
+//         }
+//     }
+//     return filteredArray
+//  }
+
+//  const callback1 = function(value){
+//     return value >= 3
+//  }
+
+//  const callback2 = function(value){
+//     return value <= 4
+//  }
+
+//  const r1 = filter([1, 2, 3, 4, 5], callback1)
+//  console.log(r1)
+//  const r2 = filter([1, 2, 3, 4, 5, 6, 7, 8], callback2)
+//  console.log(r2)
+
+//--------------------
+
+// const filter = function(array, test) {
+//     const filteredArray = []
+//     for (const el of array){
+//         console.log(el)
+//         const passed = test(el)
+//         if(passed){
+//             filteredArray.push(el) 
+//         }
+//     }
+//     return filteredArray
+//  }
+
+// const fruits = [
+//     {name: 'apples', quantity: 200, isFresh: true},
+//     {name: 'grapes', quantity: 150, isFresh: false},
+//     {name: 'bananas', quantity: 100, isFresh: true},
+// ]
+
+// const getFruitsWithQuantity = function(fruit) {
+//     return fruit.quantity >= 120
+// } 
+//  const r3 = filter(fruits, getFruitsWithQuantity)
+//  console.log(r3)
+
+//----------------------------
+
+// Замыкание
+
+const fnA = function (parameter) {
+    const innerVariable = 'Значение внутренней переменной функции fnA'
+
+    const innerFunction =  function(){
+        console.log(parameter)
+        console.log(innerVariable)
+        console.log('Это вызов innerFunction')
+    }
+    return innerFunction
 }
 
-console.log(cart.getItems())
+const fnB = fnA(555)
+fnB()
+console.log(fnB)
 
-cart.add({name: 'apple', price: 50})
-cart.add({name: 'orange', price: 60})
-cart.add({name: 'cherry', price: 70})
-cart.add({name: 'tomato', price: 100})
-cart.add({name: 'cherry', price: 70})
-cart.add({name: 'tomato', price: 100})
-
-console.table(cart.getItems())
-
-console.log('Total: ', cart.countTotalPrice())
-
-cart.remove('tomato')
-console.table(cart.getItems())
-
-cart.clear()
-console.log(cart.getItems())
-
-
+ 
 
 
 
