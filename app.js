@@ -1000,22 +1000,53 @@
 
 // Функция результатом своей работы может возвращать другую функцию 
 
-const fnA = function (parameter) {
-    const innerVariable = 'Значение внутренней переменной функции fnA'
+// const fnA = function (parameter) {
+//     const innerVariable = 'Значение внутренней переменной функции fnA'
 
-    const innerFunction =  function(){
-        console.log(parameter)
-        console.log(innerVariable)
-        console.log('Это вызов innerFunction')
-    }
-    return innerFunction
-}
+//     const innerFunction =  function(){
+//         console.log(parameter)
+//         console.log(innerVariable)
+//         console.log('Это вызов innerFunction')
+//     }
+//     return innerFunction
+// }
 
-const fnB = fnA(555)
-fnB()
-console.log(fnB)
+// const fnB = fnA(555)
+// fnB()
+// console.log(fnB)
 
- 
+// const makeDish = function (sheffName, dish) {
+//     console.log(`${sheffName} готовит ${dish}`)
+// }
+
+// makeDish('Mango', 'пирожок')
+// makeDish('Mango', 'омлет')
+// makeDish('Mango', 'чай')
+
+// makeDish('Poly', 'котлеты')
+// makeDish('Poly', 'супик')
+// makeDish('Poly', 'кофе')
+
+//----------------------
+
+// const makeSheff = function(name) {
+//     const makeDish = function(dish){
+//         console.log(`${name} готовит ${dish}`)
+//     }
+//     return makeDish
+// }
+
+// const mango = makeSheff('Mango')
+// const poly = makeSheff('Poly')
+// mango('котлеты')
+// poly('хот-дог') 
+
+//-------------------------
+
+// Округление
+
+
+
 
 
 
