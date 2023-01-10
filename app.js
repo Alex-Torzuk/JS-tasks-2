@@ -377,12 +377,13 @@
 //---------------
 
 // let arr = [2, 3, 5, 1, 4, 9]
-// function callback(a, b, c) {
+// function callback (a, b, c) {
 //     //a - element
 //     //b - index
 //     //c - arr
 //     console.log(a)
 // }
+// // arr.forEach(callback)
 // arr.forEach(callback)
 //------------------------------
 
@@ -1015,15 +1016,17 @@
 // fnB()
 // console.log(fnB)
 
+//----------------------
+
 // const makeDish = function (sheffName, dish) {
 //     console.log(`${sheffName} готовит ${dish}`)
 // }
 
-// makeDish('Mango', 'пирожок')
+// makeDish('Mango', 'котлеты')
 // makeDish('Mango', 'омлет')
 // makeDish('Mango', 'чай')
 
-// makeDish('Poly', 'котлеты')
+// makeDish('Poly', 'хот-дог')
 // makeDish('Poly', 'супик')
 // makeDish('Poly', 'кофе')
 
@@ -1044,6 +1047,108 @@
 //-------------------------
 
 // Округление
+
+//------------------------
+
+// const floatingPoint = 3.364287
+
+// const someInt = Math.round(floatingPoint)
+
+// const withDecimals = Number(floatingPoint.toFixed(2))
+
+// console.log(withDecimals)
+
+// console.log(someInt)
+
+//-----------------------
+
+// const floatingPoint = 3.364287
+
+// const rounder = function(number, places) {
+//     return Number(number.toFixed(places))
+// }
+
+// console.log(rounder(floatingPoint, 2))
+
+//----------------------
+
+// Тоже самое только с замыканием
+
+// const floatingPoint = 3.364287
+
+// const rounder = function(places) {
+//     return function (number) {
+//         return Number(number.toFixed(places))
+//     }     
+// }
+    
+// const rounder2 = rounder(2)
+
+// console.log(rounder2(floatingPoint))
+
+//------------------------
+
+// Приватные данные и функции
+
+// const salaryManagerFactory = function (employeeName, baseSalary) {
+//     let salary = baseSalary
+
+//     return {
+//         raise(amount) {
+//             if (amount > 1000){
+//                 return 'Ты офигел'
+//             }
+//             salary += amount
+//         },
+//         lower(amount) {
+//             salary -=amount
+//         },
+//         current () {
+//             return `Текущая зарплата ${employeeName} - ${salary}`
+//         }
+//     }
+// }
+
+// const salaryManager = salaryManagerFactory('by Sasha', 5000)
+// // console.log(salaryManager.raise(2000))
+// salaryManager.raise(1000)
+// console.log(salaryManager.current())
+
+//------------------------
+
+// Стрелочные функции
+
+// const add = function (a, b, c) {
+//     return a + b + c
+// }
+
+//  console.log(add(5, 4, 2))
+
+// ----------Один вариани
+// const add = (a, b, c) => {
+//     return a + b + c
+// }
+// console.log(add(5, 4, 2))
+
+// -----------Второй вариант
+// const add = (a, b, c) => a + b + c
+
+//  console.log(add(5, 5, 5))
+
+//------------------------
+
+// const fnA = function () {
+//     return {
+//         a: 5
+//     }
+// }
+//  console.log(fnA()) 
+
+//  const fnA = () => ({a: 5}) // 'Объект' в стрелочной функции пишем в круглых скобках!!
+
+// console.log(fnA())
+
+
 
 
 
