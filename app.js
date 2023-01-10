@@ -865,6 +865,77 @@
 // функцию как результат своей работы называется - функцией высшего порядка.
 
 //------------------
+
+//============================
+// callback - обычная функция которая передается как аргумент в другую функцию
+
+//=============================map
+
+// const name = ['Bobby', 'Peter', 'Phelep']
+// const number = [100, 200, 300]
+
+// const map = (arr, callback) => {
+//     const result = []
+//     for (const elem of arr ) {
+//         result.push(callback(elem))
+//     }
+//     return result
+// }
+
+// console.log(map(name, (nameTo) => `<li>${nameTo}</li>`))
+// console.log(map(number, (num) => num * 2))
+
+//===========================map
+
+const arr = [1, 2, 3].map((value) =>`<li>${value}</li>`)
+console.log(arr)
+ 
+//============================filter
+
+// const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const arr3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const arr4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// const filter = (arr, callback) => {
+//     const result = []
+//     for (const elem of arr) {
+//         if (callback(elem)){
+//             result.push(elem)
+//         }
+        
+//     }
+//     return result
+// }
+
+// console.log(filter(arr1, (value) => value > 5))
+// console.log(filter(arr2, (value) => value < 5))
+// console.log(filter(arr3, (value) => value % 2 === 0))
+// console.log(filter(arr4, (value) => value % 2 !== 0))
+
+//============================reduce
+
+// const arr = [1, 1, 1, 1, 6, 6]
+
+// const reduce = function (arr, callback ,initialValue){
+//     let result = initialValue
+//     for (const elem of arr){
+//        result = callback(result, elem)
+//     }
+//     return result 
+// }
+
+// // function sum (a, b) {
+// //     return a + b
+// // }
+
+// console.log(reduce(arr, (sum, value) => sum + value, 0))
+// console.log(reduce(arr, (acc, value) => acc * value, 1))
+
+//==============================
+
+
+//------------------
 // const fnA = function (message, callback){
 //     console.log(message)
 //     callback(100)
