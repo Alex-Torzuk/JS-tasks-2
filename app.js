@@ -1067,9 +1067,9 @@
 //  console.log(r3)
 
 //----------------------------
-
+//================================
 // Замыкание
-
+//================================
 // Функция результатом своей работы может возвращать другую функцию 
 
 // const fnA = function (parameter) {
@@ -1089,6 +1089,65 @@
 
 //----------------------
 
+// const count = () => {
+//     let x = 10 // этот х и называется замкнутая переменная
+    
+//     return function () {
+        
+//         console.log(x)
+//     }
+// }
+
+// const count1 = count()
+// console.log(count1()) 
+
+//-------------------------
+// function processCall(recipient) {
+//     // Имитируем доступность абонента случайным числом
+//     const isRecipientAvailable = Math.random() > 0.5;
+  
+//     if (!isRecipientAvailable) {
+//       console.log(`Абонент ${recipient} недоступен, оставьте сообщение.`);
+//       // Логика активации автоответчика
+//     } else {
+//       console.log(`Соединяем с ${recipient}, ожидайте...`);
+//       // Логика принятия звонка
+//     }
+//   }
+  
+//   processCall("Манго");
+
+  //-----------------------
+//   function processCall(recipient, onAvailable, onNotAvailable) {
+//     // Имитируем доступность абонента случайным числом
+//     const isRecipientAvailable = Math.random() > 0.5;
+  
+//     if (!isRecipientAvailable) {
+//       onNotAvailable(recipient);
+//       return;
+//     }
+  
+//     onAvailable(recipient);
+//   }
+  
+//   function takeCall(name) {
+//     console.log(`Соединяем с ${name}, ожидайте...`);
+//     // Логика принятия звонка
+//   }
+  
+//   function activateAnsweringMachine(name) {
+//     console.log(`Абонент ${name} недоступен, оставьте сообщение.`);
+//     // Логика активации автоответчика
+//   }
+  
+//   function leaveHoloMessage(name) {
+//     console.log(`Абонент ${name} недоступен, записываем голограмму.`);
+//     // Логика записи голограммы
+//   }
+  
+//   processCall("Манго", takeCall, activateAnsweringMachine);
+//   processCall("Поли", takeCall, leaveHoloMessage);
+//-------------------------
 // const makeDish = function (sheffName, dish) {
 //     console.log(`${sheffName} готовит ${dish}`)
 // }
@@ -1218,6 +1277,43 @@
 //  const fnA = () => ({a: 5}) // 'Объект' в стрелочной функции пишем в круглых скобках!!
 
 // console.log(fnA())
+
+//==================for-each
+
+// const arr = [1, 2, 3, 4, 5]
+// arr.forEach(function (number, index, x){
+//     console.log(`Индекс - ${index}, Значение - ${number}, и это ${x}`)
+// }) 
+//========================THIS=====================
+
+// const petya = {
+//     username: "Petya",
+//     showThis() {
+//       console.log(this);
+//     },
+//     showName() {
+//       console.log(this.arr);
+//     },
+//     arr: [1, 2, 3, 4, 5],
+//   };
+
+//   petya.showThis()
+//   petya.showName()
+
+//==================
+
+const petya = {
+    username: "Petya",
+    showThis() {
+      console.log(this);
+    },
+    showName() {
+      console.log(`Hello ${this.username}`);
+    },
+    arr: [1, 2, 3, 4, 5],
+  };
+
+  petya.showName()
 
 
 
