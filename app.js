@@ -887,8 +887,8 @@
 
 //===========================map
 
-const arr = [1, 2, 3].map((value) =>`<li>${value}</li>`)
-console.log(arr)
+// const arr = [1, 2, 3].map((value) =>`<li>${value}</li>`)
+// console.log(arr)
  
 //============================filter
 
