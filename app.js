@@ -1285,6 +1285,7 @@
 //     console.log(`Индекс - ${index}, Значение - ${number}, и это ${x}`)
 // }) 
 //========================THIS=====================
+//Неважно как ты объявил функцию(метода объекта)...главное как вызвал
 
 // const petya = {
 //     username: "Petya",
@@ -1302,19 +1303,100 @@
 
 //==================
 
-const petya = {
-    username: "Petya",
-    showThis() {
-      console.log(this);
-    },
-    showName() {
-      console.log(`Hello ${this.username}`);
-    },
-    arr: [1, 2, 3, 4, 5],
-  };
+// const petya = {
+//     username: "Petya",
+//     showThis() {
+//       console.log(this);
+//     },
+//     showName() {
+//       console.log(`Hello ${this.username}`);
+//     },
+//     arr: [1, 2, 3, 4, 5],
+//   };
 
-  petya.showName()
- 
+//   petya.showName()
+
+//----------------------
+
+// const showTime = function() {
+//   console.log(this)
+//   console.log(this.tag)
+// }
+
+// // Без контекста объекта будет underfined
+
+// const user = {
+//   tag: 'Mango',
+// }
+
+// user.showUserTag = showTime
+// console.log(user)
+// user.showUserTag()
+
+//-------------------------
+
+// Тренируемся 1
+
+// const counter = {
+//   value:  0,
+//   increment(value) {
+//     console.log('increment this - ', this)
+//     this.value += value
+//   },
+//   decrement(value) {
+//     console.log('decrement this -', this)
+//     this.value += value
+//   },
+// }
+
+//  const updateCounter = function(value, operation){
+//   operation(value)
+//  }
+// updateCounter(10, counter.increment.bind(counter))
+// updateCounter(5 , counter.decrement.bind(counter))
+
+//-----------------------------Делаем счетчик
+
+
+const counter = {
+  value:  0,
+  increment(value) {
+    console.log('increment this - ', this)
+    this.value += 1
+  },
+  decrement(value) {
+    console.log('decrement this -', this)
+    this.value -= 1
+  },
+}
+
+const decrementBtn = document.querySelector('.js-decrement')
+console.log(decrementBtn)
+
+const valueEl = document.querySelector('.js-value')
+console.log(valueEl)
+
+const incrementBtn = document.querySelector('.js-increment')
+console.log(incrementBtn)
+
+// decrementBtn.textContent = 'swwnkwhfk'
+
+decrementBtn.addEventListener('click', function(){
+  console.log('klick')
+
+  counter.decrement()
+  valueEl.textContent = counter.value
+})
+
+incrementBtn.addEventListener('click', function(){
+  console.log('klick')
+
+  counter.increment()
+
+  valueEl.textContent = counter.value
+})
+
+//-------------------------------------------------------
 
 
 
