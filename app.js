@@ -1358,45 +1358,106 @@
 //-----------------------------Делаем счетчик
 
 
-const counter = {
-  value:  0,
-  increment(value) {
-    console.log('increment this - ', this)
-    this.value += 1
-  },
-  decrement(value) {
-    console.log('decrement this -', this)
-    this.value -= 1
-  },
-}
+// const counter = {
+//   value:  0,
+//   increment(value) {
+//     console.log('increment this - ', this)
+//     this.value += 1
+//   },
+//   decrement(value) {
+//     console.log('decrement this -', this)
+//     this.value -= 1
+//   },
+// }
 
-const decrementBtn = document.querySelector('.js-decrement')
-console.log(decrementBtn)
+// const decrementBtn = document.querySelector('.js-decrement')
+// console.log(decrementBtn)
 
-const valueEl = document.querySelector('.js-value')
-console.log(valueEl)
+// const valueEl = document.querySelector('.js-value')
+// console.log(valueEl)
 
-const incrementBtn = document.querySelector('.js-increment')
-console.log(incrementBtn)
+// const incrementBtn = document.querySelector('.js-increment')
+// console.log(incrementBtn)
 
-// decrementBtn.textContent = 'swwnkwhfk'
+// // decrementBtn.textContent = 'swwnkwhfk'
 
-decrementBtn.addEventListener('click', function(){
-  console.log('klick')
+// decrementBtn.addEventListener('click', function(){
+//   console.log('klick')
 
-  counter.decrement()
-  valueEl.textContent = counter.value
-})
+//   counter.decrement()
+//   valueEl.textContent = counter.value
+// })
 
-incrementBtn.addEventListener('click', function(){
-  console.log('klick')
+// incrementBtn.addEventListener('click', function(){
+//   console.log('klick')
 
-  counter.increment()
+//   counter.increment()
 
-  valueEl.textContent = counter.value
-})
+//   valueEl.textContent = counter.value
+// })
 
 //-------------------------------------------------------
+
+//=====================Прототип объекта=====================
+//  в прототипах все ссылки!! 
+
+// const objC = {
+//   z: 5,
+// }
+// console.log(objC)
+
+// const objB = Object.create(objC)
+// objB.y = 2
+// console.log(objB)
+
+// const objA = Object.create(objB)
+// objA.x = 1
+// console.log(objA)
+
+//======================
+
+// const Car = function({brand, model, price} = {}){
+//     this.brand = brand
+//     this.model = model
+//     this.price = price
+// }
+
+// const myCar = new Car({
+//   brand: 'Audi',
+//   model: 'Q7',
+//   price: '50000'
+// })
+
+// console.log(myCar)
+
+// const myCar2 = new Car({
+//   brand: 'BMW',
+//   model: '750',
+//   price: '40000'
+// })
+
+// console.log(myCar2)
+
+//=================
+
+const User = function({email, password} = {}){
+  this.email = email
+  this.password = password
+
+}
+
+console.log(User.prototype)
+
+User.prototype.changeEmail = function(newMail){
+  this.email = newMail
+}
+
+const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
+console.log(mango)
+
+mango.changeEmail('bdbbsvkbv')
+console.log(mango)
+console.log(Math.PI)
 
 
 
