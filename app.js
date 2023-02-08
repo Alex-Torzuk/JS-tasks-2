@@ -662,16 +662,16 @@
 // const obj = {
 //     a: 1,
 //     b: 2,
-//     c: 3, 
+//     c: 3,
 // }
 //  const objKeys = Object.values(obj)
 //  console.log(objKeys)
 
 // const authors = {
-//     kivi: 4, 
-//     poly: 7, 
-//     ajax: 9, 
-//     mango: 6, 
+//     kivi: 4,
+//     poly: 7,
+//     ajax: 9,
+//     mango: 6,
 // }
 
 // const entries = Object.entries(authors)
@@ -725,7 +725,7 @@
 
 // const myCrazyObject = {
 //     name: ' Нелепый объект',
-//     someArray: [7, 9, {'purpose': ' путаница ', 'number': 123}, 3.3], 
+//     someArray: [7, 9, {'purpose': ' путаница ', 'number': 123}, 3.3],
 //     randomAnimal:' Банановая акула'
 // }
 // console.log(myCrazyObject)
@@ -745,7 +745,7 @@
 //     },
 //     //Прибавлять
 //     add(product) {
-//         //  
+//         //
 
 //         for(const item of this.items){
 //             if(item.name === product.name){
@@ -859,9 +859,9 @@
 
 // Функция обратного вызова - callback
 // Функция может принимать другие функции как параметры;
-// Функция которая передается другой функции как аргумент называется - 
+// Функция которая передается другой функции как аргумент называется -
 // функцией обратного вызова (callback - функция);
-// Функция которая принимает другую функцию как параметр или возвращает 
+// Функция которая принимает другую функцию как параметр или возвращает
 // функцию как результат своей работы называется - функцией высшего порядка.
 
 //------------------
@@ -922,7 +922,7 @@
 //     for (const elem of arr){
 //        result = callback(result, elem)
 //     }
-//     return result 
+//     return result
 // }
 
 // // function sum (a, b) {
@@ -945,7 +945,7 @@
 // }
 
 // fnA('Hello world', fnB)
-//------------------ 
+//------------------
 
 // const doMach = function(a, b, callback){
 //     const resalt = callback(a, b)
@@ -1021,7 +1021,7 @@
 //         console.log(el)
 //         const passed = test(el)
 //         if(passed){
-//             filteredArray.push(el) 
+//             filteredArray.push(el)
 //         }
 //     }
 //     return filteredArray
@@ -1048,7 +1048,7 @@
 //         console.log(el)
 //         const passed = test(el)
 //         if(passed){
-//             filteredArray.push(el) 
+//             filteredArray.push(el)
 //         }
 //     }
 //     return filteredArray
@@ -1062,7 +1062,7 @@
 
 // const getFruitsWithQuantity = function(fruit) {
 //     return fruit.quantity >= 120
-// } 
+// }
 //  const r3 = filter(fruits, getFruitsWithQuantity)
 //  console.log(r3)
 
@@ -1070,7 +1070,7 @@
 //================================
 // Замыкание
 //================================
-// Функция результатом своей работы может возвращать другую функцию 
+// Функция результатом своей работы может возвращать другую функцию
 
 // const fnA = function (parameter) {
 //     const innerVariable = 'Значение внутренней переменной функции fnA'
@@ -1099,7 +1099,7 @@
 // }
 
 // const count1 = count()
-// console.log(count1()) 
+// console.log(count1())
 
 //-------------------------
 // function processCall(recipient) {
@@ -1172,7 +1172,7 @@
 // const mango = makeSheff('Mango')
 // const poly = makeSheff('Poly')
 // mango('котлеты')
-// poly('хот-дог') 
+// poly('хот-дог')
 
 //-------------------------
 
@@ -1209,7 +1209,7 @@
 // const rounder = function(places) {
 //     return function (number) {
 //         return Number(number.toFixed(places))
-//     }     
+//     }
 // }
     
 // const rounder2 = rounder(2)
@@ -1272,7 +1272,7 @@
 //         a: 5
 //     }
 // }
-//  console.log(fnA()) 
+//  console.log(fnA())
 
 //  const fnA = () => ({a: 5}) // 'Объект' в стрелочной функции пишем в круглых скобках!!
 
@@ -1283,7 +1283,7 @@
 // const arr = [1, 2, 3, 4, 5]
 // arr.forEach(function (number, index, x){
 //     console.log(`Индекс - ${index}, Значение - ${number}, и это ${x}`)
-// }) 
+// })
 //========================THIS=====================
 //Неважно как ты объявил функцию(метода объекта)...главное как вызвал
 
@@ -1399,7 +1399,7 @@
 //-------------------------------------------------------
 
 //=====================Прототип объекта=====================
-//  в прототипах все ссылки!! 
+//  в прототипах все ссылки!!
 
 // const objC = {
 //   z: 5,
@@ -1440,25 +1440,46 @@
 
 //=================
 
-const User = function({email, password} = {}){
-  this.email = email
-  this.password = password
+// const User = function({email, password} = {}){
+//   this.email = email
+//   this.password = password
 
+// }
+
+// console.log(User.prototype)
+
+// User.prototype.changeEmail = function(newMail){
+//   this.email = newMail
+// }
+
+// const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
+// console.log(mango)
+
+// mango.changeEmail('bdbbsvkbv')
+// console.log(mango)
+// console.log(Math.PI)
+//-------------------
+
+function Account(numbert, amount = 0, currency) {
+  this.numbert = numbert;
+  this.amount = amount;
+  this.currency = currency;
+
+  this.add = function (value) {
+    this.amount += value;
+  }
+  this.withdrawal = function(value) {
+    this.amount -= value
+  }
 }
 
-console.log(User.prototype)
-
-User.prototype.changeEmail = function(newMail){
-  this.email = newMail
-}
-
-const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
-console.log(mango)
-
-mango.changeEmail('bdbbsvkbv')
-console.log(mango)
-console.log(Math.PI)
-
+const account_1 = new Account(2323984124, 100, "USD")
+const account2 = new Account(2323934, 1000, "EUR")
+account_1.add(200)
+account2.add(221)
+account2.withdrawal(1000)
+console.log(account_1)
+console.log(account2)
 
 
 
