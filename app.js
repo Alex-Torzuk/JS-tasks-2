@@ -1440,25 +1440,214 @@
 
 //=================
 
-const User = function({email, password} = {}){
-  this.email = email
-  this.password = password
+// const User = function({email, password} = {}){
+//   this.email = email
+//   this.password = password
 
-}
+// }
 
-console.log(User.prototype)
+// console.log(User.prototype)
 
-User.prototype.changeEmail = function(newMail){
-  this.email = newMail
-}
+// User.prototype.changeEmail = function(newMail){
+//   this.email = newMail
+// }
 
-const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
-console.log(mango)
+// const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
+// console.log(mango)
 
-mango.changeEmail('bdbbsvkbv')
-console.log(mango)
-console.log(Math.PI)
+// mango.changeEmail('bdbbsvkbv')
+// console.log(mango)
+// console.log(Math.PI)
 
+
+//==============Перебирающие методы=====================
+
+// ----forEach----
+// - Поэлементно перебирает оригинальный массив;
+// - Ничего не возвращает;
+// - Заменяет классический for, если не нужно прерывать цикл.
+
+// const numbers = [5, 10, 15, 20, 25]
+// numbers.forEach(function(number){
+//   console.log('number', number)
+// })
+
+// ----map----
+
+// - Поэлементно перебирает оригинальный массив;
+// - Не изменяет оригинальный массив
+// - Ничего не возвращает;
+// - Возвращает новый массив такой же длины.
+
+// const numbers = [5, 10, 15, 20, 25]
+// const hello = numbers.map(function(number){
+//   console.log(number)
+//   return number * 2
+// })
+// console.log(hello)
+
+//--------------
+
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// const playerNames = players.map( palyer  => palyer.name)
+
+// console.log(playerNames)
+
+// ----filter----
+// - Поэлементно перебирает оригинальный массив;
+// - Возвращает новый массив (с элементами или пустой)
+// - Добавляет в возвращаемый массив элементы которые удовлетворяют условию
+// коллбек-функции
+// - если коллбек вернул true элемент добавляется в возвращаемый массив
+// - если коллбек вернул false элемент НЕ добавляется в возвращаемый массив
+
+// const numbers = [5, 10, 15, 20, 25]
+// const filterNum = numbers.filter(number => {
+//   return number < 15
+// })
+// console.log(filterNum)    
+
+// ----find----
+// - Элемент перебирает оригинальный массив
+// - Возвращает первый элемент удовлетворяющий условию или undefined
+
+// - используется для поиска уникльных элементов
+
+// const numbers = [5, 10, 15, 20, 25];
+// const number = numbers.find(number => number > 10)
+// console.log(number)// 15
+//-----------
+
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+// const playerIdToFind = 'player-3';
+
+// const playerWithId = players.find(player => player.id === playerIdToFind)
+// console.log(playerWithId)
+
+// ----every()----
+// - Поэлементно перебирает оригинальный массив;
+// - Возвращает true если все элементы массива удовлетворяют условию
+
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// const isAllOnline = players.every(player => player.online)
+// console.log(isAllOnline) // false
+
+
+
+// ----some()----
+// - Поэлементно перебирает оригинальный массив;
+// - Возвращает true если хотябы один элемент массива удовлетворяют условию
+
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// const isAllOnline = players.some(player => player.online)
+// console.log(isAllOnline) // true
+
+// ----.reduce()----
+
+// - Поэлементно перебирает оригинальный массив;
+// - Возвращает что угодно
+// - Заменяет все на свете, но использовать нужно с умом
+
+// const numbers = [5, 10, 15, 20, 25]
+// const total = numbers.reduce((acc, number) => {
+// return acc + number
+// }, 0)
+// console.log(total)// 75
+
+//---------
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150, 
+// };
+
+// const totalSalary = Object.values(salary).reduce((total, salary) => total + salary, 0,)
+// console.log(totalSalary)// 300
+
+//-----------
+
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// const totalTimePlayeds = players.reduce((total, time) => total + time.timePlayed, 0)
+// console.log(totalTimePlayeds) // 1240
+
+//---------- 
+
+// Считаем общую сумму товаров корзины
+
+// const card = [
+//   {label: 'Apples', price: 100, quantity: 2},
+//   {label: 'Bananas', price: 120, quantity: 3},
+//   {label: 'Lemons', price: 70, quantity: 4},
+// ]
+
+// const totalAmount = card.reduce((acc, items) => acc + items.price * items.quantity, 0)
+// console.log(totalAmount) // 840
+
+//----------
+
+// Собираем все теги из твитов
+
+// const tweets = [
+//   {id: '000', likes: 5, tage: ['js', 'nodejs']},
+//   {id: '001', likes: 2, tage: ['html', 'css']},
+//   {id: '002', likes: 17, tage: ['html', 'js', 'nodejs']},
+//   {id: '003', likes: 8, tage: ['css', 'react']},
+//   {id: '004', likes: 0, tage: ['js', 'nodejs', 'react']},
+// ]
+
+// const allTags = tweets.reduce((tags, tweet) =>  {
+//   // tags.push(...tweet.tage)
+//   // return tags
+//   return[...tags, ...tweet.tage]// - современный синтаксис
+// }, [] )
+// console.log(allTags)
+
+// const tagsStats = allTags.reduce((acc, tag) => {
+//   // Если свойство с ключом tag есть - увеличить его значение на 1
+//   if(acc[tag]){
+//     acc[tag] += 1
+//     return acc
+//   }
+//   // Если свойства нет с таким ключом что в tag, сделать и записать 1
+//   acc[tag] = 1
+//   return acc
+// }, {})
+// console.log(tagsStats)
 
 
 
