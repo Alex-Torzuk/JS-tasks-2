@@ -1445,7 +1445,6 @@
 //   this.password = password
 
 // }
-<<<<<<< HEAD
 
 // console.log(User.prototype)
 
@@ -1649,43 +1648,8 @@
 //   return acc
 // }, {})
 // console.log(tagsStats)
-=======
 
-// console.log(User.prototype)
-
-// User.prototype.changeEmail = function(newMail){
-//   this.email = newMail
-// }
-
-// const mango = new User({email: '_alex__08@ukr.net', password: 1212121})
-// console.log(mango)
-
-// mango.changeEmail('bdbbsvkbv')
-// console.log(mango)
-// console.log(Math.PI)
-//-------------------
-
-function Account(numbert, amount = 0, currency) {
-  this.numbert = numbert;
-  this.amount = amount;
-  this.currency = currency;
-
-  this.add = function (value) {
-    this.amount += value;
-  }
-  this.withdrawal = function(value) {
-    this.amount -= value
-  }
-}
-
-const account_1 = new Account(2323984124, 100, "USD")
-const account2 = new Account(2323934, 1000, "EUR")
-account_1.add(200)
-account2.add(221)
-account2.withdrawal(1000)
-console.log(account_1)
-console.log(account2)
->>>>>>> 26179ed3fa197d11c0f654b01204808c5c6b6fc4
+// ----  ----
 
 
 
