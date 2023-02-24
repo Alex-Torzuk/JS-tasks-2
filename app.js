@@ -1467,10 +1467,21 @@
 // - Ничего не возвращает;
 // - Заменяет классический for, если не нужно прерывать цикл.
 
-// const numbers = [5, 10, 15, 20, 25]
+// const numbers = [5, 10, 15, 20, 25] 
 // numbers.forEach(function(number){
 //   console.log('number', number)
 // })
+
+// const arr1 = [1, 2, 3];
+// const arr2 = [2, 3, 4];
+// const res = [];
+
+// arr1.forEach((value) => {
+//   if (arr2.includes(value)){
+//     res.push(value)
+//   }
+// })
+// console.log(res)// [2, 3]
 
 // ----map----
 
@@ -1486,6 +1497,13 @@
 // })
 // console.log(hello)
 
+//======
+
+// const numbers = [2, 3, 4]
+// const res = numbers.map(function(number){
+//   return number * 2
+// })
+// console.log(res)// [4, 6, 8]
 //--------------
 
 // const players = [
@@ -1512,7 +1530,12 @@
 // const filterNum = numbers.filter(number => {
 //   return number < 15
 // })
-// console.log(filterNum)    
+// console.log(filterNum) 
+
+// const names = ['Bobby', 'Chris','Bobby', 'Piter', 'Jon', 'Jon']
+// const uniqueNames = names.filter((name, idx, array) => array.indexOf(name) === idx)
+// console.log(uniqueNames)// ['Bobby', 'Chris', 'Piter', 'Jon']
+
 
 // ----find----
 // - Элемент перебирает оригинальный массив
@@ -1578,7 +1601,7 @@
 // const numbers = [5, 10, 15, 20, 25]
 // const total = numbers.reduce((acc, number) => {
 // return acc + number
-// }, 0)
+// },  0)
 // console.log(total)// 75
 
 //---------
@@ -1649,36 +1672,220 @@
 // }, {})
 // console.log(tagsStats)
 
-// ----  ----
+//------------
+
+// const numbers = [1, 1, 1, 1, 1, 1, 1]
+// const sum = numbers.reduce((acc, value) => {
+//   return acc +value
+// }, 0)
+// console.log(sum)
+
+// const numbers2 = [-3, -5, 0, 5]
+// const max = numbers2.reduce((acc, value) => (value > acc ? value : acc), 0)
+// console.log(max)// 5
+//=======
+
+// const min = numbers2.reduce((acc, value) => (value < acc ? value : acc), 0)
+// console.log(min)// -5
+
+//=========
+
+// const text = 'abc abc d eeeeee'
+// const res = text.split('').reduce((acc, letter) => {
+//   return {
+//     ...acc,
+//     [letter]: acc[letter] ? acc[letter] + 1 : 1
+//   }
+
+// }, {})
+// console.log(res)
+
+//============
 
 
+// ----.sort()----
+// - Сортирует по возрастагию
+// - Приводят элементы к строке
 
+// const numbers = [1, 9, 6, 2, 3]
+// numbers.sort()
+// console.log(numbers)// [1, 2, 3, 6, 9]
 
+//--------
 
+// const letters = ['b', 'B', 'a', 'A']
+// letters.sort()
+// console.log(letters)// ['A', 'B', 'a', 'b']
 
+//----------
 
+// const numbers = [1, 9, 6, 2, 3]
 
+// numbers.sort((curEl, nextEl) => nextEl - curEl)
+// console.log(numbers)// [9, 6, 3, 2, 1]
+//------
 
+// const numbers = [1, 9, 6, 2, 3]
+// const copy = [...numbers]
+// copy.sort()
+// console.log(copy) // копия [1, 2, 3, 6, 9]
 
+//------------
 
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
 
+// const sortedByBestPlayers = [...players].sort((timeStartEl, timeEndEl) => {
+//   return timeStartEl.timePlayed - timeEndEl.timePlayed
+// })
+// console.log(sortedByBestPlayers)
 
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
 
+// const byName = [...players].sort((nameStart, nameEnd) => {
+//   const result = nameStart.name[0] > nameEnd.name[0]
+//   if(result){
+//     return 1
+//   }
+//   if(!result){
+//     return -1
+//   }
+// })
+// console.log(byName)
 
+//------.flat()---------
+// - Разглаживает массив до нужной глубины
+// - По умолчанию глубина 1
+// const arrey = [1, 2, [4, [5]], [6, [7, 8, [9]]]]
 
+// console.log(arrey.flat(3))// [1, 2, 4, 5, 6, 7, 8, 9]
 
+//------.flatMap()---------
+// - Комбинация map + flat
 
+// const tweets = [
+//   {id: '000', likes: 5, tage: ['js', 'nodejs']},
+//   {id: '001', likes: 2, tage: ['html', 'css']},
+//   {id: '002', likes: 17, tage: ['html', 'js', 'nodejs']},
+//   {id: '003', likes: 8, tage: ['css', 'react']},
+//   {id: '004', likes: 0, tage: ['js', 'nodejs', 'react']},
+// ]
 
+// const tags = tweets.flatMap((t) => t.tage)
+// console.log(tags)// ['js', 'nodejs', 'html', 'css', 'html', 'js', 'nodejs', 'css',
+// 'react', 'js', 'nodejs', 'react']
 
+//------цепочки вызовов - chaining-------//
 
+// const numbers = [1, 5, 2, 4, 3]
 
+// const sorted = numbers.filter(num => num > 2).map(num => num * 3).sort((a, b) => a - b)
+// console.log(sorted) // [9, 12, 15]
 
+//---------
 
+// const players = [
+//   {id: 'id-1', tag: ['Mango'], isOnline: true, rank: 800},
+//   {id: 'id-2', tag: ['Poly'], isOnline: false, rank: 600},
+//   {id: 'id-3', tag: ['Ajax'], isOnline: true, rank: 100},
+//   {id: 'id-4', tag: ['Kiwi'], isOnline: true, rank: 400},  
+// ]
 
+// const onlineAndSorted = players
+// .filter(player => player.isOnline)
+// .sort((a, b) => b.rank - a.rank)
+// console.table(onlineAndSorted) 
+//---------
 
+//=====LODASH====== - библиотека методов(объект с методами, подключается 
+// через файлик скрипта)
+// console.dir(_)
 
+// console.log(_.isEmpty({}))
 
+// console.log(_.isEmpty({a: 1}))
 
+//  const user = {
+//   name: 'Mango',
+//   location: {
+//     coords: [1, 2],
+//     city: 'Lviv'
+//   }
+//  }
+// метод get
+//console.log(_.get(user, 'location.city'))// Lviv
+
+//console.log(user?.location?.city) // - новый метод
+
+// метод union()
+// console.log(_.union([1, 2, 3], [3, 4, 5]))//[1, 2, 3, 4, 5]
+
+// метод range()
+//console.log(_.range(1, 6))// [1, 2, 3, 4, 5]
+
+// метод sortBy()
+// const users = [
+//   { 'user': 'fred',   'age': 48 },
+//   { 'user': 'barney', 'age': 36 },
+//   { 'user': 'fred',   'age': 40 },
+//   { 'user': 'barney', 'age': 34 }
+// ];
+
+// console.log(_.sortBy(users, user => user.age))
+// console.log(_.sortBy(users, ['user', 'age']))
+
+// метод _.sum()
+// console.log(_.sum([1, 2, 3, 4, 5])) // 15
+
+// метод _.sumBy()
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// console.log(_.sumBy(players, player => player.timePlayed)) //1240
+
+// метод _.uniq() and uniqBy()
+
+// метод _.random()
+
+// метод min() and max()
+
+// метод minBy() and maxBy()
+// const players = [
+//   {id: 'player-1', name: 'Mango', timePlayed: 310, points: 54, online: false},
+//   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
+//   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
+//   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+// ]
+
+// console.log(_.minBy(players, player => player.timePlayed)) // худший игрок
+
+// методы camelCase(), capitalize(), kebabCase(), lowerCase(), upperCase()
+//============
+
+const ul = document.querySelector('ul')
+
+const books = ['HP', 'Max Fry', 'Robinson', 'Tom Sawyer']
+
+const list = books.map((book) => `<li>${book}</li>`)
+
+ul.insertAdjacentHTML('beforeend', list.join(''))
 
 
 
