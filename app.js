@@ -1460,27 +1460,28 @@
 // console.log(Math.PI)
 //-------------------
 
-function Account(numbert, amount = 0, currency) {
-  this.numbert = numbert;
-  this.amount = amount;
-  this.currency = currency;
+// function Account(numbert, amount = 0, currency) {
+//   this.numbert = numbert;
+//   this.amount = amount;
+//   this.currency = currency;
 
-  this.add = function (value) {
-    this.amount += value;
-  }
-  this.withdrawal = function(value) {
-    this.amount -= value
-  }
-}
+//   this.add = function (value) {
+//     this.amount += value;
+//   }
+//   this.withdrawal = function(value) {
+//     this.amount -= value
+//   }
+// }
 
-const account_1 = new Account(2323984124, 100, "USD")
-const account2 = new Account(2323934, 1000, "EUR")
-account_1.add(200)
-account2.add(221)
-account2.withdrawal(1000)
-console.log(account_1)
-console.log(account2)
+// const account_1 = new Account(2323984124, 100, "USD")
+// const account2 = new Account(2323934, 1000, "EUR")
+// account_1.add(200)
+// account2.add(221)
+// account2.withdrawal(1000)
+// console.log(account_1)
+// console.log(account2)
 
+//============DOM====================
 
 
 
