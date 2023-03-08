@@ -1458,58 +1458,6 @@
 // mango.changeEmail('bdbbsvkbv')
 // console.log(mango)
 // console.log(Math.PI)
-<<<<<<< HEAD
-//-------------------
-
-// function Account(numbert, amount = 0, currency) {
-//   this.numbert = numbert;
-//   this.amount = amount;
-//   this.currency = currency;
-
-//   this.add = function (value) {
-//     this.amount += value;
-//   }
-//   this.withdrawal = function(value) {
-//     this.amount -= value
-//   }
-// }
-
-// const account_1 = new Account(2323984124, 100, "USD")
-// const account2 = new Account(2323934, 1000, "EUR")
-// account_1.add(200)
-// account2.add(221)
-// account2.withdrawal(1000)
-// console.log(account_1)
-// console.log(account2)
-
-//============DOM====================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> a947a2c33c556b69a4b24dbda6b2354c3cb4d400
 
 
 //==============Перебирающие методы=====================
@@ -1519,7 +1467,7 @@
 // - Ничего не возвращает;
 // - Заменяет классический for, если не нужно прерывать цикл.
 
-// const numbers = [5, 10, 15, 20, 25] 
+// const numbers = [5, 10, 15, 20, 25]
 // numbers.forEach(function(number){
 //   console.log('number', number)
 // })
@@ -1563,7 +1511,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const playerNames = players.map( palyer  => palyer.name)
@@ -1582,7 +1530,7 @@
 // const filterNum = numbers.filter(number => {
 //   return number < 15
 // })
-// console.log(filterNum) 
+// console.log(filterNum)
 
 // const names = ['Bobby', 'Chris','Bobby', 'Piter', 'Jon', 'Jon']
 // const uniqueNames = names.filter((name, idx, array) => array.indexOf(name) === idx)
@@ -1605,7 +1553,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 // const playerIdToFind = 'player-3';
 
@@ -1621,7 +1569,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const isAllOnline = players.every(player => player.online)
@@ -1638,7 +1586,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const isAllOnline = players.some(player => player.online)
@@ -1661,7 +1609,7 @@
 // const salary = {
 //   mango: 100,
 //   poly: 50,
-//   ajax: 150, 
+//   ajax: 150,
 // };
 
 // const totalSalary = Object.values(salary).reduce((total, salary) => total + salary, 0,)
@@ -1674,13 +1622,13 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const totalTimePlayeds = players.reduce((total, time) => total + time.timePlayed, 0)
 // console.log(totalTimePlayeds) // 1240
 
-//---------- 
+//----------
 
 // Считаем общую сумму товаров корзины
 
@@ -1789,7 +1737,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const sortedByBestPlayers = [...players].sort((timeStartEl, timeEndEl) => {
@@ -1802,7 +1750,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // const byName = [...players].sort((nameStart, nameEnd) => {
@@ -1851,16 +1799,16 @@
 //   {id: 'id-1', tag: ['Mango'], isOnline: true, rank: 800},
 //   {id: 'id-2', tag: ['Poly'], isOnline: false, rank: 600},
 //   {id: 'id-3', tag: ['Ajax'], isOnline: true, rank: 100},
-//   {id: 'id-4', tag: ['Kiwi'], isOnline: true, rank: 400},  
+//   {id: 'id-4', tag: ['Kiwi'], isOnline: true, rank: 400},
 // ]
 
 // const onlineAndSorted = players
 // .filter(player => player.isOnline)
 // .sort((a, b) => b.rank - a.rank)
-// console.table(onlineAndSorted) 
+// console.table(onlineAndSorted)
 //---------
 
-//=====LODASH====== - библиотека методов(объект с методами, подключается 
+//=====LODASH====== - библиотека методов(объект с методами, подключается
 // через файлик скрипта)
 // console.dir(_)
 
@@ -1906,7 +1854,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // console.log(_.sumBy(players, player => player.timePlayed)) //1240
@@ -1923,7 +1871,7 @@
 //   {id: 'player-2', name: 'Poly', timePlayed: 470, points: 92, online: true},
 //   {id: 'player-3', name: 'Kiwi', timePlayed: 230, points: 48, online: true},
 //   {id: 'player-4', name: 'Ajax', timePlayed: 150, points: 71, online: false},
-//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},    
+//   {id: 'player-5', name: 'Chelsy', timePlayed: 80, points: 48, online: true},
 // ]
 
 // console.log(_.minBy(players, player => player.timePlayed)) // худший игрок
@@ -1931,15 +1879,32 @@
 // методы camelCase(), capitalize(), kebabCase(), lowerCase(), upperCase()
 //============
 
-const ul = document.querySelector('ul')
+// const ul = document.querySelector('ul')
+ 
+// const books = ['HP', 'Max Fry', 'Robinson', 'Tom Sawyer']
 
-const books = ['HP', 'Max Fry', 'Robinson', 'Tom Sawyer']
+// const list = books.map((book) => `<li>${book}</li>`)
 
-const list = books.map((book) => `<li>${book}</li>`)
+// ul.insertAdjacentHTML('beforeend', list.join(''))
 
-ul.insertAdjacentHTML('beforeend', list.join(''))
+//================DOM===================
 
+//== Создаем и добавляем коллекцию
 
+const colorPickerOptions = [
+  { label: 'red', color: '#F44336' },
+  { label: 'green', color: '#4CAF50' },
+  { label: 'blue', color: '#2196F3' },
+  { label: 'grey', color: '#607D8B' },
+  { label: 'pink', color: '#E91E63' },
+  { label: 'indigo', color: '#3F51B5' },
+]
+
+const buttonEl = document.createElement('button');
+buttonEl.type = 'button';
+buttonEl.textContent = option.label;
+buttonEl.style.backgroundColor = option.color;
+console.log(buttonEl)
 
 
 
