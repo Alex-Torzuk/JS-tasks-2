@@ -1904,7 +1904,9 @@ const buttonEl = document.createElement('button');
 buttonEl.type = 'button';
 buttonEl.textContent = option.label;
 buttonEl.style.backgroundColor = option.color;
-console.log(buttonEl)
+console.log('hello')
+
+console.dir(colorPickerOptions)
 
 
 
