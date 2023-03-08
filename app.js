@@ -1899,14 +1899,23 @@ const colorPickerOptions = [
   { label: 'pink', color: '#E91E63' },
   { label: 'indigo', color: '#3F51B5' },
 ]
+const colorPickerContyainerEl = document.querySelector('.js-color-picker')
 
-const buttonEl = document.createElement('button');
-buttonEl.type = 'button';
-buttonEl.textContent = option.label;
-buttonEl.style.backgroundColor = option.color;
-console.log('hello')
+const elements = colorPickerOptions.map(option => {
+  const buttonEl = document.createElement('button');
+  buttonEl.type = 'button';
+  buttonEl.textContent = option.label;
+  buttonEl.style.backgroundColor = option.color;
+  return buttonEl
+})
+//const option = colorPickerOptions[1]
 
-console.dir(colorPickerOptions)
+
+
+
+console.log(elements)
+
+colorPickerContyainerEl.append(...elements)
 
 
 
