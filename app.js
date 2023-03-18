@@ -1919,8 +1919,18 @@
 
 //================DOM=================== - Павел
 
-const uncle = document.querySelector('li#uncle')
-console.log(uncle.previousElementSibling.firstElementChild.firstElementChild)
+// const aunt = document.querySelector('#aunt')
+
+//atribut
+// aunt.setAttribute('data-age', 18)
+// console.log('my aunt is', aunt.getAttribute('data-age'), 'years old' )
+
+// aunt.classList.remove('one', 'two', 'three')
+// console.dir(aunt.classList.add('tomato'))
+
+// const myDiv = document.createElement('div')
+// myDiv.innerHTML = '<h1>I am a new div </h1>' 
+// document.body.appendChild(myDiv)
 
 
 
