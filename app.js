@@ -2032,9 +2032,105 @@
 //---Создание и удаление элементов--------
 
 
+// const heading = document.createElement("h1");
+// console.log(heading); // <h1></h1>
+// heading.textContent = 'Hello every body'
 
 
+// const image = document.createElement("img");
+// image.src = "https://placeimg.com/640/480/nature";
+// image.alt = "Nature";
+// console.log(image);
+
+// Добавление
+
+// const list = document.querySelector(".usernames");
+
+// // Adds an item to the end of the list
+// const lastItem = document.createElement("li");
+// lastItem.textContent = "Poly";
+// list.append(lastItem);
+
+// // Adds an item to the beginning of the list
+// const firstItem = document.createElement("li");
+// firstItem.textContent = "Ajax";
+// list.prepend(firstItem);
+
+// // Adds a title before the list
+// const title = document.createElement("h2");
+// title.textContent = "USERNAMES";
+// list.before(title);
+
+// // Adds a paragraph after the list
+// const text = document.createElement("p");
+// text.textContent =
+//   "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum tenetur assumenda fugiat maxime, soluta aspernatur quasi nihil in asperiores ad distinctio illo et debitis error iure voluptate numquam maiores nisi!";
+// list.after(text);
+
+// Удаление
+
+// const text = document.querySelector('.text');
+// text.remove();
+
+// const title = document.querySelector('.title')
+// title.remove()
+
+//-----------------Свойство innerHTML
+
+// const article = document.querySelector(".article");
+// console.log(article.innerHTML);
+
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
+
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
+
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
+
+//Изменения
+
+// const title = document.querySelector(".article .title");
+// title.innerHTML = 'New and <span class="accent">improved</span> title';
+
+// const technologies = ["HTML", "CSS", "JavaScript", "React", "Node"];
+// const list = document.querySelector(".list");
+
+// const markup = technologies
+//   .map((technology) => `<li class="list-item">${technology}</li>`)
+//   .join("");
+
+// // Check the console, you'll see a single string with HTML tags
+// console.log(markup);
+
+// // Adding all the markup in one operation
+// list.innerHTML = markup;
+
+//Добавление
+
+// const article = document.querySelector(".article");
+// const htmlString = `<p class="article-text">Nullam quis ante. Vestibulum
+// dapibus nunc ac augue. In consectetuer turpis ut velit.</p>
+//    <a class="link" href="#">Read more...</a>
+//   <h3>Hello my friend</h3>`;
+
+// // Replace += with = operator. See the difference?
+// // Article title is lost because we overwrite element content.
+// article.innerHTML += htmlString;
+
+//-----------------Метод insertAdjacentHTML()
+
+// const list = document.querySelector(".list");
+
+// const newTechnologies = ["React", "TypeScript", "Node.js"];
+// const markup = newTechnologies
+//   .map((technology) => `<li class="list-item new">${technology}</li>`)
+//   .join("");
+
+// list.insertAdjacentHTML("beforeend", markup);
+// list.insertAdjacentHTML("beforebegin", "<h2>Popular technologies</h2>");
 
 
-
+//---------------------Подключение скриптов
 
