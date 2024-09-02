@@ -2136,5 +2136,85 @@
 
 
 
+//===============================================================
 
- 
+// Тесты JS
+
+
+// const a = {foo: 'bar'};
+// const b = {foo: 'bar'};
+
+// console.log(a == b);
+// console.log(a === b);
+
+
+// console.log(0);
+// console.log(1);
+// setTimeout(() => console.log(2), 1000);
+// setTimeout(() => console.log(3), 0);
+// console.log(4);
+
+
+// console.log(0);
+// setTimeout(function() { console.log(1) }, 1000);
+// setTimeout(function() { console.log(2) }, 0)
+// console.log(3);
+// while(true) {}
+
+// function withContext() {
+//   var obj = {
+//   name: 'obj2',
+//   a: () => this,
+//   b: function() { return this }
+//   }
+  
+//   console.log(obj.a().name); // ???
+//   console.log(obj.b().name); // ???
+//   };
+  
+//   withContext.bind({ name: 'obj1' })();
+
+// requestAnimationFrame(() => {
+//   console.log('r');
+//   });
+//   setTimeout(() => {
+//   console.log('s');
+//   }, 0);
+
+// const sirko = [];
+// sirko.push('dog');
+// sirko.unshift('my dog');
+// sirko.length = 3;
+// sirko.pop();
+
+// console.log(sirko)
+
+
+// var arrLike = {length: 4, sirko: 'dog', 2: 'my dog'};
+// var arr = Array.from(arrLike);
+
+// console.log(arr)
+
+// function withContext() {
+//   var obj = {
+//   name: 'obj2',
+//   a: () => this,
+//   b: function() { return this }
+//   }
+  
+//   console.log(obj.a().name); // ???
+//   console.log(obj.b().name); // ???
+//   };
+  
+//   withContext.bind({ name: 'obj1' })()
+
+  // requestAnimationFrame(() => {
+  //   console.log('r');
+  //   });
+  //   setTimeout(() => {
+  //   console.log('s');
+  //   }, 0)
+
+  // let a = new Array(256).join(' ')
+
+  // console.log(a)
